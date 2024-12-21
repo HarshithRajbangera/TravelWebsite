@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/profiles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Profile</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/auth/logout">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>User Details</h2>
+      <p><strong>Email:</strong> <%= user.email %></p>
+    </section>
+    <section>
+        <h2>Your Posts</h2>
+        <% if (userStories && userStories.length > 0) { %>
+          <% userStories.forEach(story => { %>
+            <div>
+              <h3><%= story.title %></h3>
+              <p><%= story.description %></p> <!-- Assuming there is a description field -->
+            </div>
+          <% }) %>
+        <% } else { %>
+          <p>You have not posted any stories yet.</p>
+        <% } %>
+      </section>
+      
+      <section>
+        <h2>Your Joined Trips</h2>
+        <% if (joinedTrips && joinedTrips.length > 0) { %>
+          <% joinedTrips.forEach(trip => { %>
+            <div>
+              <h3><%= trip.title %></h3>
+              <p><%= trip.from_location %> to <%= trip.destination_address %></p>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <p>You have not joined any trips yet.</p>
+        <% } %>
+      </section>
+      
+  </main>
+</body>
+</html>

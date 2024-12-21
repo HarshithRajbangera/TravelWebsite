@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <link rel="stylesheet" href="/css/stories.css">
+
+</head>
+<body>
+    <h1>Stories</h1>
+    <a href="/stories/add">Add a New Story</a>
+    <ul>
+        <% stories.forEach(story => { %>
+            <li>
+                <h2><a href="/stories/<%= story.id %>"><%= story.title %></a></h2>
+                <p>By: <%= story.author %> | <%= new Date(story.created_at).toLocaleString() %></p>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

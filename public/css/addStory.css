@@ -1,0 +1,117 @@
+/* Color Palette */
+:root {
+    --primary-color: #3A6351; /* Earthy Green */
+    --secondary-color: #FFA62B; /* Sunset Gold */
+    --accent-color: #E4572E; /* Vibrant Coral */
+    --background-color: #FAF3DD; /* Warm Sand */
+    --text-color: #2A2B2E; /* Deep Charcoal */
+    --header-bg: #3A6351; /* Earthy Green */
+    --header-text: #FFFFFF; /* White */
+    --card-bg: #FFFFFF; /* White for story cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Form container */
+  .form-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+  }
+  
+  /* Form styles */
+  .story-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  input, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--secondary-color);
+  }
+  
+  /* Button Styling */
+  .submit-btn {
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 12px var(--shadow-color);
+  }
+  
+  .submit-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .submit-btn:disabled {
+    background-color: var(--text-color);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 28px;
+    }
+    
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  

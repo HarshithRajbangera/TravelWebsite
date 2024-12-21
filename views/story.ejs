@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= story.title %></title>
+    <link rel="stylesheet" href="/css/story.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><%= story.title %></h1>
+    <div>
+    <p><%= story.content %></p>
+    <p>By: Author ID <%= story.author_id %> | <%= new Date(story.created_at).toLocaleString() %></p>
+    <a href="/stories">Back to Stories</a>
+    </div>
+</body>
+</html>

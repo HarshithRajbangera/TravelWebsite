@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <h1>Welcome, <%= username %>!</h1>
+  <h2>Your Joined Trips</h2>
+  <ul>
+    <% joinedTrips.forEach(trip => { %>
+      <li>
+        <h3><%= trip.title %></h3>
+        <p>From: <%= trip.from_location %>  </p>
+        <p>To: <%= trip.destination_address %></p>
+        <p>Highlights:<%= trip.content %></p>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>TravelBuddy</h1>
+    <nav>
+      <a href="/auth/login">Login</a>
+      <a href="/auth/signup">Signup</a>
+      <% if (user) { %>
+        <a href="/profile">Profile</a>
+      <% } %>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome to our Travel Story Platform</h2>
+    <p>Explore stories and share your own!</p>
+  
+    <% if (stories.length > 0) { %>
+      <% stories.forEach(story => { %>
+        <div>
+          <h2><%= story.title %></h2>
+          <p>By: <%= story.author %></p>
+          <p>From: <%= story.from_location %> to <%= story.destination_address %></p>
+          <form action="/stories/<%= story.id %>/join" method="POST">
+            <button type="submit">Join Trip</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>No stories to display right now. Check back later!</p>
+    <% } %>
+  </main>
+  
+</body>
+</html>

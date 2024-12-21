@@ -1,0 +1,163 @@
+/* styles.css */
+
+/* Root Variables for Colors */
+:root {
+  --primary-color: #3A6351; /* Earthy Green */
+  --secondary-color: #FFA62B; /* Sunset Gold */
+  --accent-color: #E4572E; /* Vibrant Coral */
+  --background-color: #FAF3DD; /* Warm Sand */
+  --text-color: #2A2B2E; /* Deep Charcoal */
+  --header-bg: #3A6351; /* Earthy Green */
+  --header-text: #FFFFFF; /* White */
+  --card-bg: #FFFFFF; /* White for story cards */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Elegant font for headings */
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Header */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2rem;
+  flex: 1 1 auto;
+}
+
+header nav {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+header nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Main Section */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p {
+  margin: 0.5rem 0;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Story Cards */
+main div {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+main div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+main div h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+main div p {
+  margin: 0.5rem 0;
+}
+
+main div form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+main div form button {
+  background-color: var(--primary-color);
+  color: var(--header-text);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+main div form button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  main div {
+    padding: 1rem;
+  }
+
+  main div h2 {
+    font-size: 1.2rem;
+  }
+
+  main div form button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

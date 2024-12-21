@@ -1,0 +1,156 @@
+/* General Reset */
+body, h1, h2, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* CSS Variables */
+  :root {
+    --primary-color: #3A6351; /* Earthy Green */
+    --secondary-color: #FFA62B; /* Sunset Gold */
+    --accent-color: #E4572E; /* Vibrant Coral */
+    --background-color: #FAF3DD; /* Warm Sand */
+    --text-color: #2A2B2E; /* Deep Charcoal */
+    --header-bg: #3A6351; /* Earthy Green */
+    --header-text: #FFFFFF; /* White */
+    --card-bg: #FFFFFF; /* White for story cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Page Header */
+  h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Add Story Link */
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  a:hover {
+    background: var(--accent-color);
+    color: var(--header-text);
+    box-shadow: 0 6px 12px var(--shadow-color);
+    transform: translateY(-2px);
+  }
+  
+  a:active {
+    transform: translateY(1px);
+  }
+  
+  /* Stories List */
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  li {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Story Title */
+  h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  h2 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  h2 a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Story Details */
+  p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  /* Button Styling (consistent with previous template) */
+
+  
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    li {
+      padding: 15px;
+    }
+  
+    a {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  

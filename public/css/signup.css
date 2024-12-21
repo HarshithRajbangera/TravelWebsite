@@ -1,0 +1,128 @@
+/* Color Palette */
+:root {
+    --primary-color: #3A6351; /* Earthy Green */
+    --secondary-color: #FFA62B; /* Sunset Gold */
+    --accent-color: #E4572E; /* Vibrant Coral */
+    --background-color: #FAF3DD; /* Warm Sand */
+    --text-color: #2A2B2E; /* Deep Charcoal */
+    --header-bg: #3A6351; /* Earthy Green */
+    --header-text: #FFFFFF; /* White */
+    --card-bg: #FFFFFF; /* White for story cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Form container */
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+  }
+  
+  .signin {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .signin:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Form styles */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: var(--secondary-color);
+  }
+  
+  /* Button Styling */
+  #button {
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  #button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 12px var(--shadow-color);
+  }
+  
+  #button:active {
+    transform: translateY(1px);
+  }
+  
+  #button:disabled {
+    background-color: var(--text-color);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .signin {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    #button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  

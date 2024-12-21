@@ -1,0 +1,132 @@
+/* Color Palette */
+:root {
+    --primary-color: #3A6351; /* Earthy Green */
+    --secondary-color: #FFA62B; /* Sunset Gold */
+    --accent-color: #E4572E; /* Vibrant Coral */
+    --background-color: #FAF3DD; /* Warm Sand */
+    --text-color: #2A2B2E; /* Deep Charcoal */
+    --header-bg: #3A6351; /* Earthy Green */
+    --header-text: #FFFFFF; /* White */
+    --card-bg: #FFFFFF; /* White for story cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply a more elegant font */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1rem; /* Better overall readability */
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Story Content */
+  div {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Use 'Lora' font for <p> tag text for better readability */
+  p {
+    font-family: 'Lora', serif;  /* Serif font for better readability */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: var(--text-color);
+  }
+  
+  /* Meta info styling for author and date */
+  .story-meta {
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-color);
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  /* Back Button */
+  a {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+  
+  a:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+  }
+  
+  a:active {
+    transform: scale(0.98);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    a {
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  
